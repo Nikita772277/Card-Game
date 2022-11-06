@@ -2,6 +2,8 @@
 
 Deck deck = new Deck();
 Players players=new Players();
-//deck.CreateDeck();
+Card card = new Card();
+deck.CreateDeck();
 //deck.GetDeck();
-players.NumberOfPlayers();
+
+card.CreateDeck();

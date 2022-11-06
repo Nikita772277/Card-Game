@@ -8,55 +8,147 @@ namespace Card_Game
 {
     internal class Card
     {
-        private string _number;
-        private string _suit;
-        public void CreateCard()
+        private string _name;
+        public Card()
+        {
+            _name = _name;
+        }
+        public string CreateCard()
         {
             Random random = new Random();
-            switch (random.Next(6,14))
-            {
-                case 6:
-                    _number = "6";
-                    break;
-                case 7:
-                    _number = "7";
-                    break;
-                case 8:
-                    _number = "8";
-                    break;
-                case 9:
-                    _number = "9";
-                    break;
-                case 10:
-                    _number = "10";
-                    break;
-                case 11:
-                    _number = "Волет";
-                    break;
-                case 12:
-                    _number = "Дама";
-                    break;
-                case 13:
-                    _number = "Король";
-                    break;
-                case 14:
-                    _number = "Туз";
-                    break;
-            }
-            switch (random.Next(1,4))
+            switch (random.Next(1, 36))
             {
                 case 1:
-                    _suit = "Черва";
+                    return _name = "6 черва";
                     break;
                 case 2:
-                    _suit = "Трефа";
+                   return _name = "6 пика";
                     break;
                 case 3:
-                    _suit = "Пика";
+                   return _name = "6 трефа";
                     break;
                 case 4:
-                    _suit = "Бубна";
+                  return  _name = "6 бубна";
                     break;
+                case 5:
+                   return _name = "7 черва";
+                    break;
+                case 6:
+                   return _name = "7 пика";
+                    break;
+                case 7:
+                   return _name = "7 трефа";
+                    break;
+                case 8:
+                   return _name = "7 бубна";
+                    break;
+                case 9:
+                   return _name = "8 черва";
+                    break;
+                case 10:
+                   return _name = "8 пика";
+                    break;
+                case 11:
+                  return  _name = "8 трефа";
+                    break;
+                case 12:
+                  return _name = "8 бубна";
+                    break;
+                case 13:
+                   return _name = "9 черва";
+                    break;
+                case 14:
+                   return _name = "9 пика";
+                    break;
+                case 15:
+                   return _name = "9 трефа";
+                    break;
+                case 16:
+                   return _name = "9 бубна";
+                    break;
+                case 17:
+                   return _name = "10 черва";
+                    break;
+                case 18:
+                   return _name = "10 пика";
+                    break;
+                case 19:
+                   return _name = "10 трефа";
+                    break;
+                case 20:
+                  return  _name = "10 бубна";
+                    break;
+                case 21:
+                   return _name = "валет черва";
+                    break;
+                case 22:
+                   return _name = "валет пика";
+                    break;
+                case 23:
+                   return _name = "валет трефа";
+                    break;
+                case 24:
+                  return  _name = "валет бубна";
+                    break;
+                case 25:
+                  return  _name = "дама черва";
+                    break;
+                case 26:
+                   return _name = "дама пика";
+                    break;
+                case 27:
+                   return _name = "дама трефа";
+                    break;
+                case 28:
+                   return _name = "дама бубна";
+                    break;
+                case 29:
+                  return  _name = "король черва";
+                    break;
+                case 30:
+                   return _name = "король пика";
+                    break;
+                case 31:
+                  return  _name = "король трефа";
+                    break;
+                case 32:
+                   return _name = "король бубна";
+                    break;
+                case 33:
+                   return _name = "туз черва";
+                    break;
+                case 34:
+                   return _name = "туз пика";
+                    break;
+                case 35:
+                   return _name = "туз трефа";
+                    break;
+                case 36:
+                  return  _name = "туз бубна";
+                    break;
+            }
+            return "0";
+        }
+        public void CreateDeck()
+        {
+            int j = 0;
+            var a = new List<string>();
+            for (int i = 1; i <= 36;)
+            {
+                string n =null;
+                 n=CreateCard();
+                if (false == a.Contains(n))
+                {
+                    a.Add(n);
+                    i++;
+                    Console.WriteLine(n);
+                    j++;
+                    Console.WriteLine(j);
+                }
+            }
+            foreach (string s in a)
+            {
+                Console.WriteLine(s);
             }
         }
     }

@@ -7,20 +7,17 @@ using System.Threading.Tasks;
 namespace Card_Game
 {
     internal class Deck
-    {
-        Card card = new Card();
-        private Card[] a =new Card[36];
+    {        
         private List<Card> cards = new List<Card> (36);
         public void CreateDeck()
         {
-            cards = new List<Card>(36);
-            for (int i = 0; i <= 36;)
+            for (int i = 1; i <= 36;)
             {
+                var card = new Card();
                 card.CreateCard();
                 var c = card;
-                if (false == cards.Contains(c))
+                if (false == cards.Contains(card))
                 {
-
                     cards.Add(card);
                     i++;
                 }
